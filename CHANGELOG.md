@@ -4,6 +4,12 @@
 - Planned: Slack integration for runbook notifications
 - Planned: automated playbook triggering via webhook
 
+## [1.2.0] - 2026-06-06
+- Added structured JSON logging for runbook execution steps
+- Improved error handling in multi-step runbook sequences
+- Added support for conditional branching in runbook flows
+- Introduced runbook versioning to track playbook revisions
+
 ## [1.1.0] - 2026-06-03
 - Added support for multi-step runbook execution
 - Improved incident classification logic
