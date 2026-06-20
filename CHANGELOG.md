@@ -4,6 +4,11 @@
 - Planned: Slack integration for runbook notifications
 - Planned: automated playbook triggering via webhook
 
+## [1.2.1] - 2026-06-20
+- Added timeout handling for long-running runbook steps to prevent stalled executions
+- Improved runbook step retry logic with configurable backoff intervals
+- Added metrics emission for runbook execution duration per step
+
 ## [1.2.0] - 2026-06-06
 - Added structured JSON logging for runbook execution steps
 - Improved error handling in multi-step runbook sequences
