@@ -4,6 +4,12 @@
 - Planned: Slack integration for runbook notifications
 - Planned: automated playbook triggering via webhook
 
+## [1.2.2] - 2026-06-27
+- Added support for runbook tagging to enable category-based filtering and discovery
+- Improved execution context passing between runbook steps for stateful workflows
+- Added validation schema for runbook YAML to catch misconfiguration at load time
+- Minor performance improvements to the runbook lookup index
+
 ## [1.2.1] - 2026-06-20
 - Added timeout handling for long-running runbook steps to prevent stalled executions
 - Improved runbook step retry logic with configurable backoff intervals
