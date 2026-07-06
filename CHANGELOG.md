@@ -4,6 +4,12 @@
 - Planned: Slack integration for runbook notifications
 - Planned: automated playbook triggering via webhook
 
+## [1.2.3] - 2026-07-06
+- Added support for runbook execution audit trail to capture step-level timing and operator identity
+- Improved incident severity auto-classification using keyword-weighted scoring across alert fields
+- Fixed edge case where nested runbook step dependencies caused incorrect execution ordering
+- Added configurable cooldown period between repeated runbook triggers for the same incident class
+
 ## [1.2.2] - 2026-06-27
 - Added support for runbook tagging to enable category-based filtering and discovery
 - Improved execution context passing between runbook steps for stateful workflows
