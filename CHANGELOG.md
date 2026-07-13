@@ -4,6 +4,11 @@
 - Planned: Slack integration for runbook notifications
 - Planned: automated playbook triggering via webhook
 
+## [1.2.4] - 2026-07-13
+- Added support for runbook approval gates requiring operator sign-off before critical steps execute
+- Improved incident deduplication logic to suppress redundant triggers within a configurable window
+- Minor refactor of the runbook loader to support hot-reload without service restart
+
 ## [1.2.3] - 2026-07-06
 - Added support for runbook execution audit trail to capture step-level timing and operator identity
 - Improved incident severity auto-classification using keyword-weighted scoring across alert fields
