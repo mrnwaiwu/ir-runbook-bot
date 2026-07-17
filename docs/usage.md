@@ -70,6 +70,37 @@ steps:
     duration: 300
 ```
 
+## Retry and Timeout Configuration
+
+Each runbook step supports optional retry and timeout settings to handle transient failures gracefully:
+
+```yaml
+name: Database Connection Failure
+steps:
+  - action: notify_slack
+    message: "DB connection failure on {{ service }}"
+    timeout_seconds: 10
+    retries: 2
+  - action: restart_service
+    target: "{{ service }}"
+    timeout_seconds: 60
+    retries: 3
+    retry_delay_seconds: 15
+  - action: collect_logs
+    duration: 300
+    timeout_seconds: 120
+```
+
+### Retry Fields
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `retries` | int | 0 | Number of retry attempts after an initial failure |
+| `retry_delay_seconds` | int | 5 | Wait time between retry attempts |
+| `timeout_seconds` | int | 30 | Max time to wait for a step to complete |
+
+If a step exhausts all retries, the bot halts execution and sends a failure notification with the step name and last error.
+
 ## Logging
 
 All executions are logged to `logs/runbook.log` with step-level detail and timestamps.
